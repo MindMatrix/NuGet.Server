@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Target Name="Build" DependsOnTargets="BeforeBuild">
+    <MSBuild Projects="..\Nuget.Web.sln" Targets="Clean;Build" Properties="Configuration=$(CONFIG)" />
+  </Target>
+  <Import Project="assembly.targets"/>
+</Project>
+

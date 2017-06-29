@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <VERSION>1.0.0.0</VERSION>
+    <COMMIT>$(GIT_COMMIT)</COMMIT>
+    <BRANCH>$(GIT_BRANCH)</BRANCH>
+    <YEAR>2017</YEAR>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
+  <Target Name="BeforeBuild">
+    <AssemblyInfo CodeLanguage="CS" OutputFile="..\AssemblyVersionInfo.cs"
+     AssemblyCompany="MindMatrix Inc" AssemblyProduct="AMP"
+     AssemblyCopyright="� Copyright $(YEAR)" ComVisible="false"
+     AssemblyInformationalVersion="$(VERSION) ($(COMMIT) - $(BRANCH))"
+     AssemblyVersion="$(VERSION)" AssemblyFileVersion="$(VERSION)"/>
+  </Target>
+</Project>
+
