@@ -5,6 +5,16 @@ VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuget.Web", "src\Nuget.Web\Nuget.Web.csproj", "{345223C0-5AAE-42BA-8770-A0336CBA4611}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{2BFF24BF-5EDD-40C9-918F-AE7FEDB24650}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{6A4F5ED8-9564-4782-ACB9-2FDAB8ED7794}"
+	ProjectSection(SolutionItems) = preProject
+		build\assembly.targets = build\assembly.targets
+		build\debug.targets = build\debug.targets
+		build\master.targets = build\master.targets
+		build\release.targets = build\release.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +28,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{345223C0-5AAE-42BA-8770-A0336CBA4611} = {2BFF24BF-5EDD-40C9-918F-AE7FEDB24650}
 	EndGlobalSection
 EndGlobal
